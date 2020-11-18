@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	/*un formulario en el que se introducen 2 numeros y con una lista desplegable se elige la operacion a realizar
+este formulario llama a un segundo archivo php que realiza la operacion seleccionada con esos dos numeros y muersta el resultado en pantalla*/
+/*repetir los dos ejercicios anteriores pero uniendo en un solo archivo el fomrulario y el php*/
+
+<form action="dosnumeros.php" method="post">
+	<input type="number" name="uno">
+	<input type="number" name="dos">
+	<select name="operacion">
+		<option name="suma">suma</option>
+		<option name="resta">resta</option>
+		<option name="multi">multiplicacion</option>
+		<option name="divi">division</option>
+	</select>
+	<button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>

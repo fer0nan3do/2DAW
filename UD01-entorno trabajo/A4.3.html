@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function mostrarDNI(evento){
+                document.getElementById("letra").onkeydown = letraDNI(onkeydown.key);
+                for (i = 0; i < 9999; i++) {
+                    if(letraDNI(i) == onkeydown.key){
+                        document.getElementById("letra").innerHTML = letraDNI(i);
+                    }
+                    
+                }
+            }
+            function letraDNI(numeroDni) {
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+            return letras[numeroDni % 23];
+        }
+        </script>
+        <body onkeydown="mostrarDNI(evento)">
+            <p id="letra"></p>
+        </body>
+
+    </head>
+
+</html>

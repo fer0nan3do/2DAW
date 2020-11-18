@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="A5.6.js"></script>
+    <style type="text/css">
+        .arriba {
+            background-color: pink;
+            width: 900px;
+            height: 120px;
+        }
+
+        .abajo {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="arriba">
+        <h1>Introducción facturas</h1><br><br>
+        Producto:<input type="text" id="producto"> Cantidad:<input type="number" id="cantidad"> Precio unitario:<input
+            type="number" id="precio">
+        <button onclick="anadoFila()">Añadir</button>
+    </div>
+    <div class="abajo">
+        <table>
+            <tr>
+                <thead>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Precio total</th>
+                    <th>Acciones</th>
+                </thead>
+            </tr>
+            <tbody id="body"></tbody>
+            <tfoot>
+                <tr>
+                    <th>Base imponible</th>
+                    <th id="base">0€</th>
+                </tr>
+                <tr>
+                    <th>IVA 21%</th>
+                    <th id="iva">0€</th>
+                </tr>
+                <tr>
+                    <th>Total factura</th>
+                    <th id="total">0€</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</body>
+
+</html>

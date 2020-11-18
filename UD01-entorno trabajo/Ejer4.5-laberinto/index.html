@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Juego de click</title>
+    <script src="ejer4-5.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="todo">
+        <div class="arriba" onmouseover="trampa=true"></div>
+        <div class="izq" onmouseover="trampa=true"></div>
+        <div id="tablero">
+            <div id="salida" onmousemove="reiniciar()"></div>
+            <div id="pared_0" class="pared" onmouseover="perder()"></div>
+            <div id="pared_1" class="pared" onmouseover="perder()"></div>
+            <div id="pared_2" class="pared" onmouseover="perder()"></div>
+            <div id="final" onmouseover="ganar()"></div>
+        </div>
+        <div class="abajo" onmouseover="trampa=true"></div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+             var intervalo = setInterval("comenzar()", 5000);
+            function comenzar(){
+                alert("hola");
+            }
+            function parar(){
+                clearTimeout(intervalo);
+                console.log("Has parado");
+            }
+        </script>
+
+    </head>
+    <body>
+        <button id="comenzarSaludos" onclick="intervalo">Comenzar saludos</button>
+        <button id="PararSaludos" onclick="parar()">Parar saludos</button>
+    </body>
+
+
+</html>

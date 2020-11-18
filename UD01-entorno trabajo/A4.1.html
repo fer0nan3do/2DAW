@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function mostrarPosicion(evento){
+                console.log(evento);
+                document.getElementById("valorRaton").innerHTML = "Posicion X: " + evento.clientX + "Posicion Y: " + evento.clientY;
+            }
+            document.onmousemove = mostrarPosicion;
+        </script>
+    </head>
+    <body>
+        <p>posicion raton</p>
+        <p id="valorRaton"></p>
+    </body>
+</html>

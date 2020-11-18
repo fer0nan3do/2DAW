@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<body>
+    <script>
+        var num1 = Math.floor(Math.random() * (10 + 1));
+        var intentos = 0;
+        do {
+            intentos++;
+            var num2 = prompt("Dime un número del 1 al 10");
+            if (num2 == num1) {
+                alert("has acertado")
+                document.write("Intentos: " + intentos);
+            } else {
+                if (num2 < num1) {
+                    console.log(num2 + " es menor que " + num1);
+                } else {
+                    console.log(num2 + " es mayor que " + num1);
+                }
+            }
+        } while (num1 != num2);
+    </script>
+</body>

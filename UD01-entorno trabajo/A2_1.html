@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var dni = new Array;
+        var parar = 0;
+        var contador = 0;
+        while (parar != -1) {
+            parar = prompt("Introduce un DNI o -1 para parar");
+            dni[contador] = parar;
+            setInterval(20000);
+            contador++;
+        }
+        borrarElementoArray();
+        for (i = 0; i < dni.length; i++) {
+            document.write(dni[i] + "" + letraDNI(dni[i]) + "<br>");
+
+        }
+        alert("Has parado");
+        function letraDNI(numeroDni) {
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+            return letras[numeroDni % 23];
+        }
+        function borrarElementoArray(){
+            var x = dni.indexOf(contador);
+            dni.splice(x, 1);
+        }
+    </script>
+</body>
+
+</html>
