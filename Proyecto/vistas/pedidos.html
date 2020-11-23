@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="../codepedidos.js"></script>
+</head>
+<body>
+    <div class="todo">
+        <h1>Admin menu</h1>
+        <div class="barra">
+            <div class="nav">
+                <a href="clientes.html">Gestión clientes</a>
+            </div>
+            <div class="actual">
+                <a href="pedidos.html">Gestión pedidos</a>
+            </div>
+        </div>
+        <div class="modalclientes" id="crearpedido">
+            <form method="GET" class="formulario">
+                <label>Fecha</label><input type="date" id="nuevafecha">
+                <label>Cliente</label><select id="dnicliente" class="inputs"></select>
+                <div class="inputs"><input type="submit" value="Crear nuevo" id="crearnuevopedido"><input type="submit" value="Cancelar" id="cancelarnuevopedido"></div>
+            </form>
+        </div>
+        <div class="modalclientes" id="modificarpedido">
+            <form class="grid_producto" method="POST">
+                <label>Id</label><input type="text" id="modificarpedido" class="inputs" disabled>
+                <label>Fecha</label><input type="date" id="modificarfecha" class="inputs">
+                <label>DNI cliente</label><input type="text" id="modificarcliente" class="inputs" disabled>
+                <label>Modificar DNI</label><select id="modificardnicliente" class="inputs"></select>
+                <input type="button" value="Modificar pedido" class="inputProducto" id="agregarModificarPedido">
+            </form>
+        </div>
+        <div id="eliminar">
+            ¿Quieres borrar este pedido?<br>
+            <button id="confirmareliminarpedido">Eliminar</button>
+            <button id="cancelareliminarpedido">Cancelar</button>
+        </div>
+        <div id="confirmarpedido">
+            Se ha añadido correctamente<br>
+            <button id="botonconfirmarpedido">Aceptar</button>
+        </div>
+        <div id="confirmarmodificarpedido">
+            Se ha modificado correctamente<br>
+            <button id="botonmodificarpedido">Aceptar</button>
+        </div>
+        <div id="eliminarpedido">
+            ¿Quieres eliminar este pedidos?<br>
+            <button id="botonEliminarLineaPedido">Eliminar</button>
+            <button id="botonCancelarLineaPedido">Cancelar</button>
+        </div>
+        <div class="contenido">
+            <div class="clientes">
+                <input type="button" name="nuevo" id="nuevopedido" value="Añadir nuevo">
+                <table class="tablapedidos">
+                    <tr class="trpedidos">
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Operaciones</th>
+                    </tr>
+                    <tbody id="pedidos"></tbody>
+                </table>
+            </div>
+        </div>
+        <footer>&copy;DAW IES Conselleria 2020</footer>
+    </div>
+    
+</body>
+</html>

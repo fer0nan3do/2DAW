@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script src="../code.js"></script>
+</head>
+<body>
+    <div class="todo">
+        <h1>Admin menu</h1>
+        <div class="barra">
+            <div class="actual">
+                <a href="clientes.html">Gestión clientes</a>
+            </div>
+            <div class="nav">
+                <a href="pedidos.html">Gestión pedidos</a>
+            </div>
+        </div>
+        <div class="modalclientes" id="crearcliente">
+            Nuevo usuario<br><br>
+            <form method="GET">
+                <label>DNI</label><input type="text" id="nuevodni">
+                <label>Nombre</label><input type="text" id="nuevousuario">
+                <label>Dirección</label><input type="text" id="nuevadireccion">
+                <label>Email</label><input type="email" id="nuevoemail">
+                <div class="inputs"><input type="submit" value="Crear nuevo" id="crearnuevo"><input type="submit" value="Cancelar" id="cancelarnuevo"></div>
+            </form>
+        </div>
+        <div class="modalclientes" id="modificarcliente">
+            Modificar cliente<br><br>
+            <form method="GET">
+                <label>DNI</label><input type="text" id="modificardni" disabled>
+                <label>Nombre usuario</label><input type="text" id="modificarusuario">
+                <label>Dirección</label><input type="text" id="modificardireccion">
+                <label>Email</label><input type="email" id="modificaremail">
+                <input class="inputs" type="submit" value="Modificar cliente" id="modificar">
+            </form>
+        </div>
+        <div id="eliminar">
+            ¿Quieres borrar este cliente?<br>
+            <button id="confirmareliminar">Eliminar</button>
+            <button id="cancelareliminar">Cancelar</button>
+        </div>
+        <div id="confirmarmodificar">
+            Se ha modificado correctamente<br>
+            <button id="botonmodificar">Aceptar</button>
+        </div>
+        <div id="confirmar">
+            Se ha añadido correctamente<br>
+            <button id="botonconfirmar">Aceptar</button>
+        </div>
+        <div class="contenido">
+            <div class="clientes">
+                <input type="submit" name="nuevo" id="nuevo" value="Añadir nuevo">
+                <table class="tablaclientes">
+                    <tr class="trclientes">
+                        <th>DNI</th>
+                        <th>Nombre</th>
+                        <th>Operaciones</th>
+                    </tr>
+                    <tbody id="clientes"></tbody>
+                </table>
+            </div>
+        </div>
+        <footer>&copy;DAW IES Conselleria 2020</footer>
+    </div>
+    
+</body>
+</html>
