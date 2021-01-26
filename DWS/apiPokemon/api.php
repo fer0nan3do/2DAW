@@ -17,7 +17,6 @@ if (isset($_POST['enviar'])) {
                 $oculta = "No";
             }
             echo "Oculta: " . $oculta . "<br>";
-            echo "Slot: " . $habilidades['slot'] . "<br>";
             echo "<br>";
         }
         echo "<hr>";
