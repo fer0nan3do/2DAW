@@ -43,7 +43,7 @@ function listarMunicipios() {
     });
 }
 function enviarMunicipio() {
-    var objeto = {n: $("#municipio").val(), c: $("#cielo").val(), fecha: "s", max: $("#maxima").val(), min: $("#minima").val()};
+    var objeto = {n: $("#municipio").val(), c: $("#cielo").val(), fecha: "1/1/1", max: $("#maxima").val(), min: $("#minima").val()};
     $.ajax({
         url: "php/anyado_municipio.php",
         type: "POST",
