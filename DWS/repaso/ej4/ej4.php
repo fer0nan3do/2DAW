@@ -30,6 +30,7 @@ if(isset($_GET['enviar'])){
     }
 }else{
     header('Location: index.html');
+    
 }
 
 ?>
