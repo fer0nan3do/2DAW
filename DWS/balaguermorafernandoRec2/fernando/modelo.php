@@ -39,9 +39,15 @@ class Usuario
     function getNombres($link)
     {
 
-        $consulta = "SELECT Nombre FROM usuario where cod_pob=$this->cod_pob";
-        $result = $link->prepare($consulta);
-        $result->execute();
-        return $result->fetchAll(PDO::FETCH_ASSOC);
+       try{
+            $query = "SELECT Nombre FROM usuario where cod_pob ='$this->cod_pob'";
+            $resultado= $link->prepare($query);
+            $resultado->execute();
+            return $resultado->fetchAll(PDO::FETCH_ASSOC);
+        }catch (PDOException $e){
+            $dato= "Error  ".$e->getMessage()."<br>";
+            return $dato;
+            die();
+        }
     }
 }

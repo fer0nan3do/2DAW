@@ -33,7 +33,7 @@ class Jugador
     {
         $consulta = "INSERT INTO jugadores VALUES (:nombre)";
         $result = $link->prepare($consulta);
-        $nombre = $this->nombre;
+        $nombre= $this->nombre;
         $result->bindParam(':nombre', $nombre);
         $nombre = $this->nombre;
         $result->execute();
