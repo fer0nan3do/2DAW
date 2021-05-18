@@ -31,10 +31,15 @@ class Jugador
     }
     function insertar($link)
     {
-        $consulta = "INSERT INTO jugadores VALUES (:nombre)";
+        $consulta = "INSERT INTO jugadores VALUES (:idJugador, :Nombre, :Apellido, :Email, :Activo)";
         $result = $link->prepare($consulta);
-        $nombre= $this->nombre;
-        $result->bindParam(':nombre', $nombre);
+        $nombre = $this->nombre;
+        $vacio = "";
+        $result->bindParam(':idJugador', $vacio);
+        $result->bindParam(':Nombre', $nombre);
+        $result->bindParam(':Apellido', $vacio);
+        $result->bindParam(':Email', $vacio);
+        $result->bindParam(':Activo', $vacio);
         $nombre = $this->nombre;
         $result->execute();
         return $result;

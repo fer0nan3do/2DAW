@@ -5,11 +5,8 @@ class Bd
     function __construct()
     {
         if (!isset($this->link)) {
-            $this->link = new mysqli('localhost', 'root', '', 'virtualmarket');
-            if ($this->link->connect_errno) {
-                $dato = "Fallo al conectar a MySQL: " . $link->connect_error;
-                require "vista/mostrar.php";
-            } else $this->link->set_charset('utf-8');
+            $this->link = new PDO("mysql:host=localhost;dbname=virtualmarket", "root", "");
+            $this->link->exec("set names utf8mb4");
         }
     }
     function __get($var)
@@ -48,8 +45,22 @@ class Cliente
     }
     function insertar($link)
     {
-        $consulta = "INSERT INTO clientes VALUES ('$this->dniCliente','$this->nombre','$this->direccion','$this->email','$this->pwd', '$this->administrador')";
-        return $link->query($consulta);
+        $consulta = "INSERT INTO clientes VALUES (:dniCliente,:nombre,:direccion,:email,:pwd, :administrador)";
+        $result = $link->prepare($consulta);
+        $dni = $this->dniCliente;
+        $nombre = $this->nombre;
+        $direccion = $this->direccion;
+        $email = $this->email;
+        $pwd = $this->pwd;
+        $administrador = $this->administrador;
+        $result->bindParam(':dniCliente', $dni);
+        $result->bindParam(':nombre', $nombre);
+        $result->bindParam(':direccion', $direccion);
+        $result->bindParam(':email', $email);
+        $result->bindParam(':pwd', $pwd);
+        $result->bindParam(':administrador', $administrador);
+        $result->execute();
+        return $result;
     }
     function modificar($link)
     {

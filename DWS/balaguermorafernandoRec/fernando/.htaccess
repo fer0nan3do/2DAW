@@ -1,2 +1,3 @@
 RewriteEngine on
 RewriteRule ^balaguer$ balaguer.php
+RewriteRule ^balaguer/(.+)$ balaguer.php?codigo=$1
