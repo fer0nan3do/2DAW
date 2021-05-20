@@ -1,6 +1,6 @@
 <?php
 echo "<table><tr><td>DNI</td><td>Nombre</td><td></td><td></td><td><a href='insertar.php'>Nuevo</a></td></tr>";
-while ($fila = $dato->fetch_assoc()) {
+while ($fila = $dato->fetch(PDO::FETCH_ASSOC)) {
     echo "<tr><td>".$fila['dniCliente']."</td><td>".$fila['nombre']."</td>";
     echo "<td><a href='modificar.php?dni=".$fila['dniCliente']."'>modificar</a></td>";
 	echo "<td><a href='borrar.php?dni=".$fila['dniCliente']."'>borrar</a></td>";

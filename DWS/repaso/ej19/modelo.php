@@ -40,8 +40,9 @@ class Cliente
     function buscar($link)
     {
         $consulta = "SELECT * FROM clientes where dniCliente='$this->dniCliente'";
-        $result = $link->query($consulta);
-        return $result->fetch_assoc();
+        $result = $link->prepare($consulta);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
     }
     function insertar($link)
     {

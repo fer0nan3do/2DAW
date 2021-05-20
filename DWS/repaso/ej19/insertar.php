@@ -15,7 +15,7 @@ if (isset($_POST['enviar'])) {
             require "vistas/mensaje.php";
         }
     }
-    $link->link->close();
+    $link = NULL;
 } else {
     require "vistas/formulario.php";
 }

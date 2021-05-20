@@ -17,5 +17,5 @@ if (isset($_POST['enviarModificar'])) {
     $cli= new Cliente($_GET['dni'],'','','','','');
     $dato=$cli->buscar($link->link);
     require "vistas/formularioModificar.php";
-    $link->link->close();
+    $link = NULL;
 }

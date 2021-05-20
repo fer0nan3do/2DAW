@@ -6,4 +6,4 @@ $dato = $cli->buscar($link->link);
 require "vistas/verDetalle.php";
 $dato = "<a href='index.php'>Volver</a>";
 require "vistas/mensaje.php";
-$link->link->close();
+$link = NULL;
