@@ -8,6 +8,6 @@
     echo "<br><form action='' method='post'>";
     echo "<tr><td>". $_SESSION['idPedido']."</td><td>$i</td> <td>".lista($base->link, 'pro/','producto', 'idProducto','nombre');
     echo "<td><input type='text' name='cantidad'></td>";
-    echo "<td><input type='submit' name='continuar' value='continuar'><td></tr></form>";
+    echo "<td><input type='submit' name='continuar' value='continuar'></td></tr></form>";
     echo "</table><br><a href='terminar.php'> terminar</a>";
 
