@@ -2,9 +2,9 @@
 session_start();
 require "modelo.php";
 $base = new Base();
-if(isset($_GET['continuar'])){
+if(isset($_POST['continuar'])){
     $_SESSION['linea']++;
-    $lin = new Linea($_SESSION['idPedido'], $_SESSION['linea'], $_SESSION['producto'], $_SESSION['cantidad']);
+    $lin = new Linea($_SESSION['idPedido'], $_SESSION['linea'], $_POST['producto'], $_POST['cantidad']);
     $lin->guardar();
 }
 require "funcion.php";

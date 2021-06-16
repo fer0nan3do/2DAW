@@ -3,7 +3,7 @@ session_start();
 require "modelo.php";
 $base = new Base();
 if (isset($_POST['enviar'])) {
-	$ped= new Pedido ($_GET['idPedido'],$_GET['fecha'],$_GET['cliente']);
+	$ped= new Pedido ($_POST['idPedido'],$_POST['fecha'],$_POST['cliente']);
 	if (!$ped->existe($base->link)) {
 		$_SESSION['linea']=0;
 		$ped->guardar();
